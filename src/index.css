@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Geometric Balance - Pastel Pro Theme Overrides */
+  --color-slate-50: #F4F7FB;
+  
+  --color-blue-50: #EBF3F9;
+  --color-blue-100: #D4E6F1;
+  --color-blue-200: #BBD5E8;
+  --color-blue-500: #A7C7E7;
+  --color-blue-600: #8baecf;
+  --color-blue-700: #7193b5;
+
+  --color-emerald-50: #f0fbf7;
+  --color-emerald-100: #D8F2EA;
+  --color-emerald-500: #B2E2D2;
+  --color-emerald-600: #93c9b8;
+  --color-emerald-700: #74ae9e;
+
+  --color-rose-50: #fff5f5;
+  --color-rose-100: #FCD9D9;
+  --color-rose-500: #F9B7B7;
+  --color-rose-600: #df9c9c;
+  --color-rose-700: #c28181;
+}
+
+/* Page global background */
+body {
+  background-color: #F4F7FB;
+  font-family: var(--font-sans);
+}
+
+/* Custom modern scrollbars and UI accents */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Rounded Geometric Adjustments */
+input, select, textarea, button, .rounded-2xl {
+  border-radius: 1rem !important; /* Unified geometric rounded look */
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pulse animation for active synchronization */
+@keyframes syncPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.sync-pulse {
+  animation: syncPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
